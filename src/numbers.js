@@ -32,15 +32,21 @@ function roundDown (a) {
 }
 
 function absolute (a) {
-  // your code here
+  return Math.abs(a)
 }
 
 function quotient (a, b) {
-  // your code here
+  let answer = a/b
+  if (answer >=0){
+    return Math.floor(answer)
+  }
+  else{
+    return Math.ceil(answer)
+  }
 }
 
 function remainder (a, b) {
-  // your code here
+  return a % b
 }
 
 module.exports = {
