@@ -1,5 +1,5 @@
 function add (a, b) {
-    return a+b
+  return a+b
 }
 
 function subtract (a, b) {
@@ -7,11 +7,11 @@ function subtract (a, b) {
 }
 
 function multiply (a, b) {
-  // your code here
+  return a * b
 }
 
 function divide (a, b) {
-  // your code here
+  return a/b
 }
 
 function power (a, b) {
