@@ -43,6 +43,7 @@ function quotient (a, b) {
   else{
     return Math.ceil(answer)
   }
+  // return Math.trunc(a/b)
 }
 
 function remainder (a, b) {

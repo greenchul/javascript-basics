@@ -1,29 +1,56 @@
+
 const getNthElement = (index, array) => {
-  // your code here
+  if (index>array.length-1){
+    index = index - (array.length)
+  }
+  return array[index]
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.join()
 };
 
 const csvStringToArray = string => {
-  // your code here
+  let array = []
+  for (let i = 0; i<string.length; i++){
+    if(string[i]!== ","){
+      array.push(string[i])
+    }
+    
+  }
+  return array
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element)
+  // no return so should equal undefined
+  
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  // let newArr = []
+  // for(let i = 0; i<array.length; i++){
+  //   newArr.push(array[i])
+  // }
+  // newArr.push(element)
+  // return newArr
+  let newArr = array.concat(element)
+  return newArr
+  
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index,1)
+  return array
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  let stringArr = []
+  for (let i = 0; i<numbers.length; i++){
+    let num = numbers[i].toString()
+    stringArr.push(num)
+  }
+  return stringArr
 };
 
 const uppercaseWordsInArray = strings => {

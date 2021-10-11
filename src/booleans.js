@@ -111,7 +111,8 @@ function containsVowels(string) {
 
 
 function isLowerCase(string) {
-  // your code here
+  let lowerCaseString = string.toLowerCase()
+  return (lowerCaseString === string) ? true : false
 };
 
 module.exports = {
