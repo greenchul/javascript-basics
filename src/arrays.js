@@ -54,15 +54,32 @@ const numbersToStrings = numbers => {
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  let uppercase = []
+  for(let i=0; i<strings.length; i++){
+    uppercase.push(strings[i].toUpperCase())
+    
+  }
+  return uppercase
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  const reversed = strings.map(function(word){
+    let reversedWord = ""
+    for(let i = word.length-1; i>=0; i--){
+      reversedWord = reversedWord + word[i]
+    }
+    return reversedWord
+  }
+ )
+ return reversed
+
 };
 
 const onlyEven = numbers => {
-  // your code here
+  const evenNumbers = numbers.filter((number)=>{
+    return number%2 === 0
+  })
+  return evenNumbers
 };
 
 const removeNthElement2 = (index, array) => {
