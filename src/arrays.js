@@ -83,23 +83,53 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  let element = array[index]
+  const newArr = array.filter((word)=>{
+    return word !== element
+  })
+  return newArr
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  const startsWithVowel = strings.filter((string)=>{
+    string= string.toLowerCase()
+    return string[0] === "a" || string[0] === "e" || string[0] === "i" || string[0] === "o" || string[0] === "u"
+  })
+  return startsWithVowel
 };
 
 const removeSpaces = string => {
-  // your code here
+  // convert string to array
+  //filter out spaces
+  // join array to string & return
+  let array = string.split("")
+  const noSpaces = array.filter((word)=>{
+    return word !== " "
+  })
+  return noSpaces.join("")
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  let total = numbers.reduce((a,b)=>{
+    return a+b
+  }, 0)
+  return total
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  let sortedByLastLetter = strings.sort((a,b)=>{
+    a = a[a.length-1]
+    b = b[b.length-1]
+
+    if (b > a) {
+      return -1;
+    }
+    if (a > b) {
+        return 1;
+    }
+    return 0;
+  })
+  return sortedByLastLetter
 };
 
 module.exports = {
